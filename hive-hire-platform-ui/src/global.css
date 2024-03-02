@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 11% 96%;
+    --foreground: 210 8% 5%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 210 8% 5%;
+
+    --popover: 0 0% 98%;
+    --popover-foreground: 210 8% 5%;
+
+    --primary: 209 47% 46%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 41 93% 59%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 210 7% 94%;
+    --muted-foreground: 210 6% 45%;
+
+    --accent: 210 7% 94%;
+    --accent-foreground: 210 8% 5%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 200 6% 90%;
+    --input: 204 6% 83%;
+    --ring: 209 24% 75%;
+
+    --radius: 0.5rem;
+  }
+  
+  .dark {
+    --background: 240 3% 6%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 3% 6%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 3% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 209 47% 46%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 200 5% 12%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 210 4% 18%;
+    --muted-foreground: 210 5% 49%;
+
+    --accent: 209 44% 12%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 200 5% 12%;
+    --input: 210 4% 18%;
+    --ring: 209 47% 40%;
+  }
+}
+
+ 
+@layer base {
+  * {
+    @apply border-border;
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: theme('colors.border');
+      border-radius: 9999px;
+    }
+  }
+  body {
+    @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+  }
+  /* Disable number input arrows */
+  /* Chrome, Safari, Edge, Opera */
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  /* Mozila */
+  input[type='number'] {
+    -moz-appearance: textfield !important;
+  }
+
+  /* Disable autofill decoration */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    transition:
+    background-color 500000s ease-in-out 0s,
+    color 500000s ease-in-out 0s;
+  }
+}
