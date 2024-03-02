@@ -1,8 +1,8 @@
 import { Outlet } from 'react-router-dom'
 
 import { Header } from '@/components/header'
-import { Separator } from '@/components/ui/separator'
 import { Dialog } from '@/components/ui/dialog'
+import { Separator } from '@/components/ui/separator'
 
 export function Landing() {
   return (

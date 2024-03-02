@@ -1,11 +1,19 @@
 import { Link } from 'react-router-dom'
+
 import logo from '@/assets/logo.svg'
 import { Button } from '@/components/ui/button'
+import { env } from '@/env'
 
 import { NavMenu } from './navigation/nav-menu'
+import {
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from './ui/dialog'
 import { Separator } from './ui/separator'
-import { DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from './ui/dialog'
-import { env } from '@/env'
 
 export function Header() {
   return (
@@ -22,20 +30,20 @@ export function Header() {
 
         <div className="flex gap-2">
           <DialogTrigger asChild>
-            <Button>
-              Open Platform
-            </Button>
+            <Button>Open Platform</Button>
           </DialogTrigger>
-          <DialogContent className='grid grid-cols-2'>
-            <div className='flex flex-col relative'>
+          <DialogContent className="grid grid-cols-2">
+            <div className="relative flex flex-col">
               <DialogHeader>
-                <DialogTitle>Open as client
-
-                <span className='opacity-70 text-destructive text-xs'> comming soon...</span>
-
+                <DialogTitle>
+                  Open as client
+                  <span className="text-xs text-destructive opacity-70">
+                    {' '}
+                    comming soon...
+                  </span>
                 </DialogTitle>
                 <DialogDescription>
-                  <ul className='list-disc ml-4'>
+                  <ul className="ml-4 list-disc">
                     <li>Hire new equipment</li>
                     <li>Manage hired assets</li>
                     <li>Open support tickets</li>
@@ -46,13 +54,13 @@ export function Header() {
               <DialogFooter>
                 <Button disabled={true}>Open as client</Button>
               </DialogFooter>
-            <Separator orientation='vertical' className='absolute -right-2'/>
+              <Separator orientation="vertical" className="absolute -right-2" />
             </div>
-            <div className='flex flex-col'>
+            <div className="flex flex-col">
               <DialogHeader>
                 <DialogTitle>Open as admin</DialogTitle>
                 <DialogDescription>
-                  <ul className='list-disc ml-4'>
+                  <ul className="ml-4 list-disc">
                     <li>Manage hired assets</li>
                     <li>Manage support tickets</li>
                     <li>Manage new orders</li>
