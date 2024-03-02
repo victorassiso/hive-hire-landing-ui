@@ -11,7 +11,11 @@ export function Header() {
     <>
       <div className="flex items-center justify-between px-4">
         <Link to="/">
-          <img src={logo} alt="Lógica" className="h-20" />
+          <img
+            src={logo}
+            alt="Hive Hire Rental & Consulting"
+            className="h-20"
+          />
         </Link>
         <NavMenu />
 
