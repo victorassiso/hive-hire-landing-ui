@@ -28,7 +28,7 @@ export function NavMenuLink({ to, children, className }: NavMenuLinkProps) {
         <div
           data-current={isActive}
           className={cn(
-            'block h-0.5 max-w-0 rounded-sm bg-primary transition-all duration-500 data-[current=true]:max-w-[80%]',
+            'block h-0.5 max-w-0 rounded-sm bg-secondary transition-all duration-500 data-[current=true]:max-w-[80%]',
           )}
         />
       </Link>
